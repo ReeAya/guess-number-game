@@ -1,0 +1,72 @@
+# Guess the Number Game
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+**Note: Delete this note and update the table of contents based on what sections you keep.**
+
+## Overview
+
+Users enter a number between 1 and 20 in order to guess which number is behind the question mark. Wrong guesses result in points from the original score being subtracted.
+
+### Screenshot
+
+![](./Screenshot%202022-05-26%20091819.png)
+
+## My process
+
+The HTML & CSS was provided by Jonas Schmedtmann through his JavaScript course, while the Javascript was written by myself.
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS
+- JavaScript
+
+### What I learned
+
+This was my fist project using JavaScript, so it was very intimidating. I slowly worked through it and managed to complete about half of it on my own. Although it was fun, it highlighted that I need to work a bit more on functions, especially the different types like arrow functions.
+
+Some code that I'm proud of:
+
+```js
+document.querySelector('.again').addEventListener('click', function () {
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+
+  displayMessage('❌Enter A Number❌');
+  document.querySelector('.number').textContent = '?';
+  //resets .guess input to blank
+  document.querySelector('.guess').value = '';
+  document.querySelector('.score').textContent = score;
+  document.querySelector('body').style.backgroundColor = '#9cd2ed';
+  document.querySelector('.number').style.width = '15rem';
+});
+```
+
+### Continued development
+
+I would love to focus on more complex, multiplayer projects as that would be more difficult and would challenge me to become a better developer.
+
+### Useful resources
+
+- [Example resource 1](https://www.udemy.com/course/the-complete-javascript-course/) - This helped me learn the basics of JavaScript and how to manipulate different elements within the DOM.
+
+## Author
+
+- Frontend Mentor - [@ReeAya](https://www.frontendmentor.io/profile/ReeAya)
+
+## Acknowledgments
+
+This project would not have been completed without Mr. Jonas Schmedtmann.
